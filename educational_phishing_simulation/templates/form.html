@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symulacja Ogłoszenia OLX</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Stwórz swoje ogłoszenie</h1>
+    <form action="/submit" method="post">
+        <label for="title">Tytuł ogłoszenia:</label>
+        <input type="text" id="title" name="title" required><br><br>
+
+        <label for="description">Opis ogłoszenia:</label>
+        <textarea id="description" name="description" required></textarea><br><br>
+
+        <label for="price">Cena:</label>
+        <input type="text" id="price" name="price" required><br><br>
+
+        <button type="submit">Dodaj ogłoszenie</button>
+    </form>
+</body>
+</html>
